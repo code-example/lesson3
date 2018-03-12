@@ -16,9 +16,7 @@
 			echo $val.'<br>';
 
 		usort($arr, function($a, $b) { 
-			$a = substr($a, strpos($a, ' ')+1, strrpos($a, ' ')-strpos($a, ' ')-1);
-			$b = substr($b, strpos($b, ' ')+1, strrpos($b, ' ')-strpos($b, ' ')-1);
-			return $a<=>$b; }); 
+			return explode(' ', $a)[1]<=>explode(' ', $b)[1]; });
 		echo "<br><br>";
 		foreach($arr as $val)
 			echo $val.'<br>';
